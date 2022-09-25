@@ -34,6 +34,7 @@
     bottom: 0;
 }
 .btn-cart:hover{
-    background-color: rgb(74, 23, 139);
+    background-color: rgb(66, 22, 121);
     color: white;
+    cursor: pointer;
 }

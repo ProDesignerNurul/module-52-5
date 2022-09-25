@@ -6,19 +6,26 @@ import './Shop.css';
 
 const Shop = () => {
 
+    // API Calling Function 
     const [products, setProducts] = useState([]);
-
     useEffect( () => {
         fetch('https://raw.githubusercontent.com/ProgrammingHero1/ema-john-resources/main/fakeData/products.json')
         .then(res => res.json())
         .then(data => setProducts(data))
     }, [])
+
+    // Items Adding Function Send
+    const clickToAddCart = (product) => {
+        console.log(product)
+    }
+
     return (
         <div className='shopping-container'>
             <div className="products-container">
                 {
                     products.map(product => <Product key={product.id}
                     product={product}
+                    clickToAddCart={clickToAddCart}
                 
                     ></Product>)
                 }
