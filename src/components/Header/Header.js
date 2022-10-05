@@ -1,19 +1,22 @@
 import React from 'react';
-import logo from '../../images/Logo.svg';
+import { Link } from 'react-router-dom';
 import './Header.css';
 
 const Header = () => {
     return (
-        <nav className='header'>
-            <img src={logo} alt="" />
-
+        <div className='header'>
             <div>
-                <a href="/home">Home</a>
-                <a href="/blogs">Blogs</a>
-                <a href="/contact">Contact</a>
-                <a href="/abous">About US</a>
+                <Link to='/home'>Home</Link>
+                <Link to='/products'>Prosucts</Link>
+                <Link to='/friends'>Friends</Link>
+                <Link to='/about'>About</Link>
             </div>
-        </nav>
+            <div className='header-info'>
+                <h1>This Is MY Personal Web Designing Website</h1>
+                <h2>I'm MD Nurul Amin</h2>
+                <h3>And I'M A Junior Web Designer || Front End Developer</h3>
+            </div>
+        </div>
     );
 };
 
