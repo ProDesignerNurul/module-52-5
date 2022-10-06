@@ -15,7 +15,7 @@ function App() {
         { path: '/home', element: <Home></Home> },
         { path: '/products',
         loader: async () => {
-          return fetch('https://www.themealdb.com/api/json/v1/1/search.php?s=a')
+          return fetch('https://jsonplaceholder.typicode.com/users')
         },
         element: <Products></Products> },
         { path: '/friends', element: <Friends></Friends> },
